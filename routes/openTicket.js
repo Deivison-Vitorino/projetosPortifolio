@@ -3,15 +3,15 @@ const { Router } = require('express');
 const route = Router();
 
 route.get('/', (req, res) => {
-    res.send('Serviços do dia');
+    res.send('Abertura de chamado');
 });
 
 route.post('/', (req, res) => {
-    res.send('Fechamento de chamado');
+    res.send('Chamado aberto com sucesso!');
 });
 
 route.patch('/', (req, res) => {
-    res.send('Reagendar Serviço');
+    res.send('Informações do chamdo salvas com sucesso!');
 });
 
 route.delete('/', (req, res) => {

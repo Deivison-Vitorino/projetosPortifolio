@@ -3,18 +3,18 @@ const { Router } = require('express');
 const route = Router();
 
 route.get('/', (req, res) => {
-    res.send('Página de usuários');
+    res.send('Cadastro de usuários');
 });
 
-route.post('/usuarios', (req, res) => {
+route.post('/', (req, res) => {
     res.send('Usuário cadastrado com sucesso!');
 });
 
-route.patch('/usuarios', (req, res) => {
+route.patch('/', (req, res) => {
     res.send('Usuário atualizado com sucesso');
 });
 
-route.delete('/usuarios', (req, res) => {
+route.delete('/', (req, res) => {
     res.send('Usuário excluido com sucesso!');
 });
 
