@@ -1,21 +1,15 @@
 const { Router } = require('express');
 
+const ticketController = require('../controllers/ticketController');
+
 const route = Router();
 
-route.get('/', (req, res) => {
-    res.send('Abertura de chamado');
-});
+route.get('/', ticketController.openTicketPage);
 
-route.post('/', (req, res) => {
-    res.send('Chamado aberto com sucesso!');
-});
+route.post('/', ticketController.openedTicket);
 
-route.patch('/', (req, res) => {
-    res.send('Informações do chamdo salvas com sucesso!');
-});
+route.patch('/', ticketController.updatedTicket);
 
-route.delete('/', (req, res) => {
-    res.send('Serviço excluido com sucesso!');
-});
+route.delete('/', ticketController.deletedTicket);
 
 module.exports = route;

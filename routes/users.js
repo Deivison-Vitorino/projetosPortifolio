@@ -1,21 +1,15 @@
 const { Router } = require('express');
 
+const userController = require('../controllers/userController');
+
 const route = Router();
 
-route.get('/', (req, res) => {
-    res.send('Cadastro de usuários');
-});
+route.get('/', userController.registerPage);
 
-route.post('/', (req, res) => {
-    res.send('Usuário cadastrado com sucesso!');
-});
+route.post('/', userController.userPage);
 
-route.patch('/', (req, res) => {
-    res.send('Usuário atualizado com sucesso');
-});
+route.patch('/', userController.updateUser);
 
-route.delete('/', (req, res) => {
-    res.send('Usuário excluido com sucesso!');
-});
+route.delete('/', userController.deleteUser);
 
 module.exports = route;
