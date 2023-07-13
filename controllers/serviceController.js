@@ -1,10 +1,10 @@
 const serviceController = {
     dailyServices: (req, res) => {
-        res.json('Serviços do dia');
+        return res.json('Serviços do dia');
     },
     closedTicket: (req, res) => {
-        res.json('Chamado encerrado com sucesso!');
+        return res.json('Chamado encerrado com sucesso!');
     }
-}
+};
 
 module.exports = serviceController;

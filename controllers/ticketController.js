@@ -1,15 +1,15 @@
 const ticketController = {
     openTicketPage: (req, res) => {
-        res.json('Abertura de chamado');
+        return res.json('Abertura de chamado');
     },
     openedTicket: (req, res) => {
-        res.json('Chamado registrado com sucesso!');
+        return res.json('Chamado registrado com sucesso!');
     },
     updatedTicket: (req, res) => {
-        res.json('Chamado atualizado com sucesso!');
+        return res.json('Chamado atualizado com sucesso!');
     },
     deletedTicket: (req, res) => {
-        res.json('Chamado excluído com sucesso!');
+        return res.json('Chamado excluído com sucesso!');
     }
 };
 

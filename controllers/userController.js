@@ -1,16 +1,16 @@
 const userController = {
     registerPage: (req, res) => {
-        res.json('Cadastro de usuários');
+        return res.json('Cadastro de usuários');
     },
     userPage: (req, res) => {
-        res.json('Página do usuário');
+        return res.json('Página do usuário');
     },
     updateUser: (req, res) => {
-        res.json('Atualizado com sucesso!');
+        return res.json('Atualizado com sucesso!');
     },
     deleteUser: (req, res) => {
-        res.json('Excluido com sucesso!');
+        return res.json('Excluido com sucesso!');
     },
-}
+};
 
 module.exports = userController;
