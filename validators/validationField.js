@@ -1,9 +1,10 @@
 const { check } = require('express-validator');
 
 const validationField = [
-    check('nome')
+    check('usuario')
         .notEmpty()
-        .withMessage('Preencha seu nome!'),
+        .isLength({ min: 8, max: 30 })
+        .withMessage('Preencha seu nome de usuário com mínimo de 8 e máximo de 30 caracteres!'),
     check('email')
         .notEmpty()
         .withMessage('Insira um e-mail válido!')
@@ -12,6 +13,7 @@ const validationField = [
     check('senha')
         .notEmpty()
         .withMessage('Senha precisa ter mínimo 8 caracteres')
+        .isLength({ min: 8 })
 ];
 
 module.exports = validationField;

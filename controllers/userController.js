@@ -1,6 +1,6 @@
 const userController = {
     registerPage: (req, res) => {
-        return res.json('Cadastro de usuários');
+        return res.json('Usuário cadastrado com sucesso');
     },
     userPage: (req, res) => {
         return res.json('Página do usuário');
