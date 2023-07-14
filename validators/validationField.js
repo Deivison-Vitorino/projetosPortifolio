@@ -6,12 +6,11 @@ const validationField = [
         .withMessage('Preencha seu nome!'),
     check('email')
         .notEmpty()
-        .isEmail()
         .withMessage('Insira um e-mail válido!')
+        .isEmail()
         .isLength({ max: 50 }),
     check('senha')
         .notEmpty()
-        .isStrongPassword({ minLength: 8 })
         .withMessage('Senha precisa ter mínimo 8 caracteres')
 ];
 
